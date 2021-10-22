@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "cargo expand",
+			"type": "shell",
+			"command": "",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"python3",
+				".vscode/build_expansion.py;",
+				"cargo",
+				"fmt;",
+				// run cargo build
+				"cargo",
+				"build",
+				"--bin",
+				"main_expanded"
+			],
+			"problemMatcher": [
+				"$rustc"
+			]
+			// "group": "build"
+		}
+	]
+}
